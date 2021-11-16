@@ -1,0 +1,154 @@
+/* #f4f5f6 */
+@font-face {
+  font-family: "CobblerMedium";
+  src: url(/fonts/FontsFree-Net-cobbler-sans-medium.ttf);
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url(/fonts/OpenSans-Light.ttf);
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1700px;
+    }
+  } */
+
+.split-content {
+  display: flex;
+  padding-top: 120px;
+  position: relative;
+  background-color: #f4f5f6;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 95%);
+  z-index: 1;
+}
+
+.right-column img {
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+.right-column {
+  z-index: 10;
+  position: relative;
+}
+
+.right-column img:hover {
+  opacity: 0.8;
+}
+.title {
+  padding-top: 20px;
+}
+
+.title h1 {
+  color: #30343f;
+  margin: 0;
+  font-family: "CobblerMedium";
+  font-weight: lighter;
+}
+
+.description p {
+  color: #7f7d7e;
+  margin: 0;
+}
+.description {
+  margin-top: 50px;
+}
+
+.contact-button a, .scroll-button a {
+  padding: 15px 45px;
+  background-color: #cc2936;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  font-weight: lighter;
+  font-family: "OpenSansLight";
+}
+.scroll-button a{
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 10px;
+  padding: 10px 30px;
+}
+.scroll-button{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-button a:hover,.scroll-button a:hover {
+  background-color: #141516;
+}
+
+.contact-button {
+  margin-top: 65px;
+}
+
+.title,
+.description {
+  width: 70%;
+}
+
+.paragraphs {
+  font-size: 22px;
+}
+.paragraphs p{
+  padding-bottom: 30px;
+}
+
+/* responsive */
+
+@media (max-width: 1440px) {
+  .title,
+  .description {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-button a, .scroll-button a {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+  .contact-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .split-content {
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+  .left-column{
+    width: 100%;
+  }
+  .right-column {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .description {
+    margin-top: 30px;
+  }
+}
